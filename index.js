@@ -7,6 +7,10 @@ const app= express();
 
 app.use(express.static('static/student-roster'))
 
+app.get('/students', (req, res) =>{
+  res.sendFile(path.join(__dirname, 'data', 'students.json'))
+});
+
 app.listen(port, () =>{
   console.log(`you are listen in port ${port}`)
 });
