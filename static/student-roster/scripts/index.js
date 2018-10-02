@@ -1,5 +1,5 @@
 
-fetch('/students')
+fetch('/api/students')
 .then(res => {
   return res.json()
 })

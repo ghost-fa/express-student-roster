@@ -103,5 +103,27 @@
     "age": "35",
     "place_of_birth": "Bucharest",
     "color": "#87CEEB"
+  },
+  {
+    "first_name": "wail",
+    "last_name": "kfore",
+    "age": "22",
+    "place_of_birth": "lebanon",
+    "color": "#fff"
+  },
+  {
+    "first_name": "wail",
+    "last_name": "kfore",
+    "age": "22",
+    "place_of_birth": "lebanon",
+    "color": "#fff"
+  },
+  {},
+  {
+    "first_name": "rame",
+    "last_name": "hameda",
+    "age": "27",
+    "place_of_birth": "damascus",
+    "color": "#ffffff"
   }
 ]
