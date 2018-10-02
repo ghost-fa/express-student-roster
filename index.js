@@ -5,18 +5,7 @@ const express = require('express');
 
 const app= express();
 
-app.get('/', (req , res) =>{
-  res.sendFile(path.join(__dirname, 'static', 'index.html'))
-});
-
-app.get('/scound', (req , res) =>{
-  res.sendFile(path.join(__dirname, 'static', 'new.html'))
-});
-
-
-app.get('/styles/main.css', (req , res) =>{
-  res.sendFile(path.join(__dirname, 'static', 'styles', 'main.css'))
-});
+app.use(express.static('static/student-roster'))
 
 app.listen(port, () =>{
   console.log(`you are listen in port ${port}`)

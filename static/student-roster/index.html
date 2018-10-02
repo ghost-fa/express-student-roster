@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Student Roster</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <main class="container mt-4">
+    <h1>WebUp Team Members</h1>
+    <form class="form-inline justify-content-end" id="filter-form">
+      <select class="custom-select mr-2" id="filter-column" required>
+        <option selected disabled value="">Choose a column...</option>
+        <option value="first_name">First Name</option>
+        <option value="last_name">Last Name</option>
+        <option value="age">Age</option>
+        <option value="place_of_birth">Place of Birth</option>
+        <option value="color">Favorite Color</option>
+      </select>
+      <input id="filter-contains" type="text" class="form-control mr-2" placeholder="Contains..." required>
+      <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
+    <table class="table mt-3" id="team-members">
+      <thead>
+        <tr class="sortable-cols">
+          <th>First Name <span data-column="first_name" data-order="asc" class="arrow arrow-down"></span></th>
+          <th>Last Name <span data-column="last_name" data-order="desc" class="arrow arrow-up"></span></th>
+          <th>Age <span data-column="age" data-order="asc" class="arrow arrow-down"></span></th>
+          <th>Place of Birth <span data-column="place_of_birth" data-order="asc" class="arrow arrow-down"></span></th>
+          <th>Favorite Color <span data-column="color" data-order="asc" class="arrow arrow-down"></span></th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="3"><abbr title="Average">AVG</abbr> Age:</td>
+          <td colspan="2">30.85</td>
+        </tr>
+        <tr>
+          <td colspan="3">Most Favorite Color:</td>
+          <td colspan="2">
+            Blue / Black
+          </td>
+        </tr>
+         <tr>
+          <td colspan="3"><abbr title="Average">AVG</abbr> Color:</td>
+          <td colspan="2">
+            #4C276F
+          </td>
+        </tr>
+      </tfoot>
+      <tbody id="table-body">
+      </tbody>
+    </table>
+  </main>
+  <script src="/scripts/index.js"></script>
+</body>
+</html>
